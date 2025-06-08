@@ -1,19 +1,28 @@
 # non-linear test
 from lab.iterate import fixed_point_non_linear_dynamic1, general_iteration, draw_diagram, non_linear_dynamic1
 
+'''
+by finding fix point of this particular dynamic (non-linear-dynamic1) you can see that
+if you set initial value same as fix point, you will see there is no change in x_j values
+but your value of mu should be in 0.25 < mu <= 0.75
+if your mu value is greater than 0.76, you will see your fix point which was stable, now it is not stable    
+'''
 
+'''stable fix point'''
 mu: float = 0.7
 initial = fixed_point_non_linear_dynamic1(mu)
 print(initial)
 non_linear = general_iteration(100, mu, initial, non_linear_dynamic1)
 draw_diagram(non_linear)
 
+'''stable fix point'''
 mu: float = 0.7
 initial = fixed_point_non_linear_dynamic1(mu)
 print(initial)
 non_linear = general_iteration(100, mu, 0.5, non_linear_dynamic1)
 draw_diagram(non_linear)
 
+'''non-stable fix point'''
 mu: float = 0.76
 initial = fixed_point_non_linear_dynamic1(mu)
 print(initial)

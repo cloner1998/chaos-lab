@@ -30,6 +30,7 @@ def general_iteration(iteration: int, mu: float, initial: float,
     x = initial
     coordinates_list.append(x)
     for i in range(iteration):
+        # in your dynamic function always get mu first and then initial value
         x = dynamic_func(mu, x)
         coordinates_list.append(x)
     return coordinates_list
