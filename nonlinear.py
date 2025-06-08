@@ -28,3 +28,5 @@ initial = fixed_point_non_linear_dynamic1(mu)
 print(initial)
 non_linear = general_iteration(100, mu, 0.5, non_linear_dynamic1)
 draw_diagram(non_linear)
+
+'''the value mu = 0.75 is called critical value'''
